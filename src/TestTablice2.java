@@ -12,5 +12,41 @@ public class TestTablice2 {
         titles[3] = "Panna";
         titles[4] = "Doktor";
         System.out.println(titles[3]);
+ // tablica dwuwymiarowa
+
+        int[][] multiDimArr ={{1,2},{3,4}}; //deklaracja tablicy dwuwymiarowej
+        /*
+        inny zapis
+        int[] a = {1,2};
+        int[] b = {3,4};
+        int[][] c = {a,b};
+         */
+
+        //iterowanie po tablicy
+        int[] numbers = {1,5,2,7,3};
+
+        //sposób 1
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+        //sposób 2 (skrócony)
+
+        for (int x: numbers) {
+            System.out.println(x);
+        }
+
+        //iterowanie po tablicy dwuwymiarowej
+
+        System.out.println("-----------------------");
+        String[] dogs = {"Burek", "Pluto", "Azor"};
+        String[] people = {"Ania", "Wojtek", "Dorota"};
+        String[][] names = {dogs, people};
+
+        for (int i = 0; i<names.length; i++ ) {
+            for(int j = 0; j < names[i].length; j++) {
+                System.out.print(names[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
